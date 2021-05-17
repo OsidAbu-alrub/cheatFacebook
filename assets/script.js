@@ -55,6 +55,9 @@ function encrypt(str) {
                     case "ى":
                         enctyptedWord.push("ۍ");
                         break;
+                    case "ئ":
+                        enctyptedWord.push("یٴ");
+                        break;
                     default:
                         enctyptedWord.push(char);
                 }
