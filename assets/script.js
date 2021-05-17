@@ -8,7 +8,9 @@ function encrypt(str) {
     let words = stringToWords(str);
     let encryptedWords = [];
     words.forEach((word) => {
-        if (nonencryptable.includes(word) === false) {
+        if (word.endsWith("سرائيل")) {
+            encryptedWords.push("الکیان المحٺل");
+        } else if (nonencryptable.includes(word) === false) {
             let chars = word.split("");
             let enctyptedWord = [];
             chars.forEach((char, index) => {
@@ -54,9 +56,6 @@ function encrypt(str) {
                         break;
                     case "ى":
                         enctyptedWord.push("ۍ");
-                        break;
-                    case "ئ":
-                        enctyptedWord.push("یٴ");
                         break;
                     default:
                         enctyptedWord.push(char);
